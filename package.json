@@ -1,0 +1,18 @@
+{
+  "name": "zl-useful-projects",
+  "version": "1.0.0",
+  "description": "A GitHub Pages-ready toolkit for estimates, quotes, and project task tracking.",
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/verify-files.mjs"
+  },
+  "keywords": [
+    "github-pages",
+    "javascript",
+    "productivity",
+    "quotation",
+    "dashboard"
+  ],
+  "author": "dola1688",
+  "license": "MIT"
+}
