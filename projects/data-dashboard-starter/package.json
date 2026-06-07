@@ -1,0 +1,11 @@
+{
+  "name": "data-dashboard-starter",
+  "version": "1.0.0",
+  "description": "A responsive static dashboard starter with KPI cards, filtering, and canvas charts.",
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check.mjs"
+  },
+  "author": "dola1688",
+  "license": "MIT"
+}
