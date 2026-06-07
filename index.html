@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ZL Useful Projects</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">ZL Projects</p>
+        <h1>Useful Project Toolkit</h1>
+      </div>
+      <nav class="tabs" aria-label="Project tools">
+        <button class="tab is-active" data-tool="estimator" type="button">Materials</button>
+        <button class="tab" data-tool="quote" type="button">Quote</button>
+        <button class="tab" data-tool="tracker" type="button">Tasks</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="workspace is-active" id="estimator">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Material Estimator</h2>
+            <button class="icon-btn" id="resetEstimator" type="button" title="Reset">R</button>
+          </div>
+          <div class="grid-form">
+            <label>Length mm<input id="lengthMm" inputmode="decimal" value="1200" /></label>
+            <label>Width mm<input id="widthMm" inputmode="decimal" value="800" /></label>
+            <label>Quantity<input id="quantity" inputmode="numeric" value="6" /></label>
+            <label>Price / m2<input id="priceSqm" inputmode="decimal" value="128" /></label>
+            <label>Waste %<input id="wastePct" inputmode="decimal" value="8" /></label>
+            <label>Labor / item<input id="laborEach" inputmode="decimal" value="18" /></label>
+          </div>
+        </div>
+        <aside class="summary">
+          <h2>Estimate</h2>
+          <dl>
+            <div><dt>Area</dt><dd id="areaOut">0 m2</dd></div>
+            <div><dt>Material</dt><dd id="materialOut">CNY 0</dd></div>
+            <div><dt>Labor</dt><dd id="laborOut">CNY 0</dd></div>
+            <div><dt>Total</dt><dd id="estimateOut">CNY 0</dd></div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="workspace" id="quote">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Quote Builder</h2>
+            <button class="icon-btn" id="copyQuote" type="button" title="Copy">C</button>
+          </div>
+          <div class="grid-form">
+            <label>Customer<input id="customer" value="Customer Name" /></label>
+            <label>Project<input id="projectName" value="Glass Material Order" /></label>
+            <label>Delivery Date<input id="deliveryDate" type="date" /></label>
+            <label>Tax %<input id="taxPct" inputmode="decimal" value="6" /></label>
+          </div>
+          <label class="wide-label">Notes<textarea id="quoteNotes">Includes material, processing, and basic installation service.</textarea></label>
+        </div>
+        <aside class="summary">
+          <h2>Quote Summary</h2>
+          <pre id="quoteOutput"></pre>
+        </aside>
+      </section>
+
+      <section class="workspace" id="tracker">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Project Tasks</h2>
+            <button class="icon-btn" id="addTask" type="button" title="Add">+</button>
+          </div>
+          <div class="task-inputs">
+            <input id="taskName" placeholder="Task name" />
+            <select id="taskStatus" aria-label="Task status">
+              <option>Todo</option>
+              <option>Doing</option>
+              <option>Done</option>
+            </select>
+          </div>
+          <ul class="task-list" id="taskList"></ul>
+        </div>
+        <aside class="summary">
+          <h2>Progress</h2>
+          <div class="progress-ring"><span id="progressOut">0%</span></div>
+          <p id="taskStats"></p>
+        </aside>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
