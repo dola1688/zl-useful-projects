@@ -1,0 +1,12 @@
+{
+  "name": "api-mock-server",
+  "version": "1.0.0",
+  "description": "Dependency-free Node.js mock API for frontend demos.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node test.mjs"
+  },
+  "author": "dola1688",
+  "license": "MIT"
+}
