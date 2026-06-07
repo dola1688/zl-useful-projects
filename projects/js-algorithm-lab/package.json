@@ -1,0 +1,12 @@
+{
+  "name": "js-algorithm-lab",
+  "version": "1.0.0",
+  "description": "Readable JavaScript algorithms and utility implementations with simple tests.",
+  "type": "module",
+  "scripts": {
+    "test": "node test/run-tests.mjs"
+  },
+  "keywords": ["javascript", "algorithms", "data-structures", "practice"],
+  "author": "dola1688",
+  "license": "MIT"
+}
