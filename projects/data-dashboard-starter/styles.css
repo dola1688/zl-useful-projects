@@ -1,0 +1,131 @@
+:root {
+  --ink: #15202b;
+  --muted: #607086;
+  --line: #dbe3ef;
+  --bg: #f4f7fb;
+  --panel: #ffffff;
+  --green: #087f5b;
+  --blue: #1d4ed8;
+  --red: #b42318;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  background: var(--bg);
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  padding: 28px 20px;
+  border-right: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.sidebar strong {
+  display: block;
+  margin-bottom: 28px;
+  font-size: 24px;
+}
+
+nav { display: grid; gap: 8px; }
+
+button, input {
+  min-height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0 12px;
+  font: inherit;
+}
+
+button {
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+}
+
+button.active {
+  border-color: var(--blue);
+  color: var(--blue);
+  font-weight: 700;
+}
+
+main { padding: 30px; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+header p {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+h1, h2 { margin: 0; }
+h1 { font-size: 38px; }
+h2 { margin-bottom: 16px; font-size: 18px; }
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+article, .chart-panel, .table-panel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: 0 12px 28px rgba(21, 32, 43, 0.08);
+}
+
+article {
+  display: grid;
+  gap: 8px;
+  padding: 20px;
+}
+
+article span { color: var(--muted); font-weight: 700; }
+article strong { font-size: 28px; }
+
+.content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  gap: 16px;
+}
+
+.chart-panel, .table-panel { padding: 20px; }
+canvas { width: 100%; height: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 12px 8px; border-bottom: 1px solid var(--line); text-align: left; }
+th { color: var(--muted); font-size: 13px; }
+
+.status {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 5px 9px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.Paid { background: var(--green); }
+.Pending { background: var(--blue); }
+.Overdue { background: var(--red); }
+
+@media (max-width: 860px) {
+  body { grid-template-columns: 1fr; }
+  .sidebar { border-right: 0; border-bottom: 1px solid var(--line); }
+  .kpis, .content { grid-template-columns: 1fr; }
+  header { align-items: stretch; flex-direction: column; }
+}
