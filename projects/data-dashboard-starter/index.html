@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Data Dashboard Starter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <strong>DashKit</strong>
+      <nav>
+        <button class="active" type="button">Overview</button>
+        <button type="button">Orders</button>
+        <button type="button">Reports</button>
+      </nav>
+    </aside>
+    <main>
+      <header>
+        <div>
+          <p>Operations</p>
+          <h1>Revenue Dashboard</h1>
+        </div>
+        <input id="filter" placeholder="Filter orders" />
+      </header>
+      <section class="kpis">
+        <article><span>Revenue</span><strong id="revenue">$0</strong></article>
+        <article><span>Orders</span><strong id="orders">0</strong></article>
+        <article><span>Avg. Value</span><strong id="average">$0</strong></article>
+      </section>
+      <section class="content">
+        <div class="chart-panel">
+          <h2>Monthly Trend</h2>
+          <canvas id="chart" width="900" height="320"></canvas>
+        </div>
+        <div class="table-panel">
+          <h2>Recent Orders</h2>
+          <table>
+            <thead><tr><th>Customer</th><th>Status</th><th>Total</th></tr></thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
