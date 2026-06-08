@@ -1,0 +1,12 @@
+{
+  "name": "node-log-analyzer",
+  "version": "1.0.0",
+  "description": "A dependency-free HTTP access log analyzer for Node.js.",
+  "type": "module",
+  "scripts": {
+    "start": "node src/cli.mjs samples/access.log",
+    "test": "node test/run-tests.mjs"
+  },
+  "author": "dola1688",
+  "license": "MIT"
+}
