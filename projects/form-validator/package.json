@@ -1,0 +1,11 @@
+{
+  "name": "form-validator",
+  "version": "1.0.0",
+  "description": "Small composable JavaScript validation helpers.",
+  "type": "module",
+  "scripts": {
+    "test": "node test/run-tests.mjs"
+  },
+  "author": "dola1688",
+  "license": "MIT"
+}
