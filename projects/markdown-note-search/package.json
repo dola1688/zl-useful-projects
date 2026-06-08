@@ -1,0 +1,12 @@
+{
+  "name": "markdown-note-search",
+  "version": "1.0.0",
+  "description": "A small Markdown note indexer and search CLI.",
+  "type": "module",
+  "scripts": {
+    "search": "node src/search.mjs samples glass",
+    "test": "node test/run-tests.mjs"
+  },
+  "author": "dola1688",
+  "license": "MIT"
+}
