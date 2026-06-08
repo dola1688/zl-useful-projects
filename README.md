@@ -1,6 +1,6 @@
 # ZL Useful Projects
 
-A GitHub portfolio monorepo with practical frontend tools, JavaScript practice modules, a static dashboard, and a small Node.js mock API.
+A GitHub portfolio monorepo with practical frontend tools, JavaScript practice modules, static dashboards, CLI utilities, and small Node.js services.
 
 ## Main App
 
@@ -48,6 +48,39 @@ cd projects/api-mock-server
 node server.mjs
 ```
 
+### `projects/node-log-analyzer`
+
+A Node.js CLI that parses access logs, groups status codes, calculates p95 latency, and reports slow routes.
+
+Run:
+
+```bash
+cd projects/node-log-analyzer
+node src/cli.mjs samples/access.log
+```
+
+### `projects/form-validator`
+
+A small composable validation library for browser forms and Node.js data checks.
+
+Run:
+
+```bash
+cd projects/form-validator
+node test/run-tests.mjs
+```
+
+### `projects/markdown-note-search`
+
+A Markdown note indexing and search CLI with simple relevance scoring.
+
+Run:
+
+```bash
+cd projects/markdown-note-search
+node src/search.mjs samples glass
+```
+
 ## Quality Checks
 
 The root project includes a GitHub Actions workflow that verifies the static files on every push and pull request.
@@ -55,6 +88,8 @@ The root project includes a GitHub Actions workflow that verifies the static fil
 ```bash
 node scripts/verify-files.mjs
 ```
+
+Individual projects include their own small test scripts.
 
 ## License
 
